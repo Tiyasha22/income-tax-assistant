@@ -8,7 +8,7 @@ never mixed in — see [scope.md](scope.md).
 Files live in `documents/` and are **not committed** (large third-party publications).
 This table is the reproducible record: the corpus can be rebuilt from it.
 
-**Captured:** 12 Oct 2026. **24 documents.**
+**Captured:** 12 Oct 2026. **26 documents.**
 
 ## How law era was verified
 
@@ -18,6 +18,11 @@ new-regime provision) no longer exists. So:
 
 - ✅ contains "tax year", no "assessment year", no "115BAC" → new law
 - ❌ contains "115BAC" or "previous year", zero "tax year" → old law, reject
+
+**Form renames matter for retrieval.** The Rules, 2026 renumbered the forms users know:
+Form 16 → **130**, 16A → **131**, 16B/16C/16D/16E → **132**, 27D → **133**, and
+Form 26AS → **168**. Users will say "Form 16" and "Form 26AS"; the documents say
+"Form 130" and "Form 168". The form notes and FAQs above are what bridge that gap.
 
 Most CBDT tutorials also carry an explicit stamp: *"This document contains the provisions
 of the Income-tax Act, 2025, as amended by the Finance Act, 2026."*
@@ -29,8 +34,10 @@ of the Income-tax Act, 2025, as amended by the Finance Act, 2026."*
 | File | Title | Source | Pages/size | Serves |
 |---|---|---|---|---|
 | `2026-27_transition-faqs-1961-to-2025_cbdt.pdf` | FAQs on Interplay and Transition from the Income-tax Act, 1961 to the Income-tax Act, 2025 | [link](https://www.incometaxindia.gov.in/documents/20117/43120/Updated-FQAs-on-Interplay%26Transitions.pdf/dda21cfd-28be-d931-ad5c-6459ecbd2ea7?version=2.0) (v2.0) | 99 pp | Q7, Q8 |
-| `2026-27_tds-certificates-form-130-133_cbdt.pdf` | Comprehensive Note on TDS Certificates — Form 130/131/132/133 (earlier 16/16A/16B/16C/16D/16E/27D), s.395(4) | forms hub ⚠️ | 4 pp | Q2, Q10 |
-| `2026-27_form-168-ais_cbdt.pdf` | Form 168 — Annual Information Statement (AIS), Rule 245 | forms hub ⚠️ | 4 pp | Q1, Q4, Q11 |
+| `2026-27_tds-certificates-form-130-133_cbdt.pdf` | Comprehensive Note on TDS Certificates — Form 130/131/132/133 (earlier 16/16A/16B/16C/16D/16E/27D), s.395(4) | [link](https://www.incometaxindia.gov.in/documents/d/guest/fn-130-131-132-133) | 4 pp | Q2, Q10 |
+| `2026-27_form-168-ais_cbdt.pdf` | Form 168 — Annual Information Statement (AIS, earlier Form 26AS), Rule 245 | [link](https://www.incometaxindia.gov.in/documents/d/guest/fn-168) | 4 pp | Q1, Q4, Q11 |
+| `2026-27_faqs-form-130-salary-tds-certificate_cbdt.pdf` | Form 130 FAQs — salary TDS certificate, s.395(4)(b) (earlier Form 16) | [link](https://www.incometaxindia.gov.in/documents/d/guest/form-130-faqs) | 3 pp | Q1, Q2, **Q3**, Q10 |
+| `2026-27_faqs-form-168-ais_cbdt.pdf` | Form 168 FAQs — AIS (earlier Form 26AS) | [link](https://www.incometaxindia.gov.in/documents/d/guest/form-168-faqs) | 4 pp | Q4, Q11 |
 | `2026-27_budget-2026-faqs-updated_cbdt.pdf` | FAQs on Budget 2026-27 (updated 23 Feb 2026) | articleKey 15773815 ⚠️ | 67 pp | Q6, Q7 |
 | `2026-27_tax-rates_tutorial.html` | Tax Rates (Tax Tutorial) | [articleKey 20753090](https://www.incometaxindia.gov.in/o/headless-delivery/v1.0/sites/20117/structured-contents/by-key/20753090) | 37 k chars | Q6, Q7 |
 | `2026-27_tds-rates_reftable.html` | TDS Rates (Tax Reference Table) | [articleKey 20863623](https://www.incometaxindia.gov.in/o/headless-delivery/v1.0/sites/20117/structured-contents/by-key/20863623) | 25 k chars | Q1, Q11 |
@@ -73,10 +80,13 @@ of the Income-tax Act, 2025, as amended by the Finance Act, 2026."*
 | `2026-27_income-tax-act-2025_cbdt.pdf` | Income-tax Act, 2025 [30 of 2025], as amended by Finance Act, 2026 | act/rules page ⚠️ | 674 pp | **do not index whole** |
 | `2026-27_income-tax-rules-2026_cbdt.pdf` | Income-tax Rules, 2026 [G.S.R. 198(E), 20-3-2026] | act/rules page ⚠️ | 423 pp | **do not index whole** |
 
-⚠️ **Five direct URLs still to fill** (the files downloaded by hand before the catalogue
-existed). Their hub pages:
-`/faqs-and-guidance-notes-on-forms-as-per-income-tax-rules-2026` (the two form notes) and
-`/income-tax-act-202511` (Budget FAQs, Act, Rules).
+**Forms hub naming pattern:** every form under the Rules, 2026 has two documents —
+`https://www.incometaxindia.gov.in/documents/d/guest/form-<n>-faqs` (FAQs) and `https://www.incometaxindia.gov.in/documents/d/guest/fn-<n>` (comprehensive
+guidance note). Roughly 190 forms are listed, so this is the place to look when a
+form-specific question appears.
+
+⚠️ **Three direct URLs still to fill** (Budget FAQs, the Act and the Rules — downloaded by hand
+before the catalogue existed). Their hub page: `/income-tax-act-202511`.
 
 ### Note on the Act and Rules
 
@@ -89,7 +99,7 @@ Keep as reference; if a gap appears, extract the specific chapter.
 
 | Format | Count | How |
 |---|---|---|
-| PDF | 10 | downloaded from `/documents/d/guest/<slug>` |
+| PDF | 12 | downloaded from `/documents/d/guest/<slug>` |
 | HTML (content-only) | 12 | Liferay headless-delivery API, `documentContent` field |
 | PDF (manual) | 2 | Act and Rules, downloaded by hand |
 
@@ -114,7 +124,7 @@ In `documents/_rejected/`, not deleted, so the decisions stay auditable.
 | `File ITR-1 (Sahaj) Online - FAQs*.html` | **Old law** — assessment-year framing |
 | `View Tax Credit Mismatch User Manual*.html` | Borderline: portal procedure, assessment-year vocabulary. Superseded by the AIS and TDS FAQs |
 | `FAQs-Budget-2026.pdf` | **Superseded** — the 1 Feb original; the 23 Feb update corrects a rate from 2% to 1% |
-| `FN-137.pdf` | Form 137 (ex-24G), TDS/TCS Book Adjustment for **government deductors**. Right law, irrelevant to the users |
+| `FN-137.pdf` ([source](https://www.incometaxindia.gov.in/documents/d/guest/form-137-faqs)) | Form 137 (ex-24G), TDS/TCS Book Adjustment for **government deductors**. Right law, irrelevant to the users |
 | `Tax-Tutorials-*.pdf` | Link index, no content — but it named the 42 tutorials, 6 of which are now in the corpus |
 | `index-only--faqs-act-2025-hub.html` | Link index — named the 30 FAQ documents, 7 now in the corpus |
 | `index-only--tax-reference-tables-hub.html` | Link index — named 25 reference tables, 4 now in the corpus |
@@ -128,7 +138,7 @@ Scanned by keyword across the whole corpus (statutes excluded).
 |---|---|---|
 | 1 | why ₹8,000 TDS deducted | 🟢 TDS FAQs, TDS rates, employees-benefits |
 | 2 | Form 16 vs bank salary | 🟢 form-130-133 note, salary deductions |
-| 3 | changed jobs, two employers | 🟡 **weak** — one mention only |
+| 3 | changed jobs, two employers | 🟢 Form 130 FAQs — "more than one employer" |
 | 4 | TDS not in Form 26AS | 🟢 Form 168 AIS |
 | 5 | HRA exemption | 🟢 allowances, salary deductions |
 | 6 | standard deduction, new regime | 🟢 salary deductions, budget FAQs |
@@ -142,15 +152,14 @@ Scanned by keyword across the whole corpus (statutes excluded).
 | 14 | advance tax | 🟢 **strong** — advance tax FAQs, 81 hits |
 | 15 | freelance plus a full-time job | 🟡 **weak** — two mentions |
 
-**13 covered, 2 weak, 0 uncovered** (was 3 / 4 / 8).
+**14 covered, 1 weak, 0 uncovered** (was 3 / 4 / 8).
 
 Keyword presence is not proof a question is answerable — it only proves the topic is in
 the corpus. Real verification happens in Stage 4-5, when retrieval returns actual
-passages. Q3 and Q15 are the two to watch.
+passages. Q15 is the one to watch.
 
 ## Still worth adding
 
 | Need | Closes |
 |---|---|
-| Salary from two employers / mid-year job change (CBDT salary-TDS circular for TY 2026-27) | Q3 |
 | Combining salary with professional income; which ITR form applies | Q15 |
