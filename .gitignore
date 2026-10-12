@@ -1,0 +1,20 @@
+# Private learning plan - contains personal notes, not for the public repo
+CLAUDE.md
+
+# Third-party source documents (large PDFs; docs/sources.md is the reproducible record)
+documents/*
+!documents/.gitkeep
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets - API keys never go in git
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
